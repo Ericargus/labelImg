@@ -87,9 +87,10 @@ class Shape(object):
     def paint(self, painter):
         if self.points:
             color = self.select_line_color if self.selected else self.line_color
-            pen = QPen(color)
+            #pen = QPen(color)
             # Try using integer sizes for smoother drawing(?)
-            pen.setWidth(max(1, int(round(2.0 / self.scale))))
+            pen.QPen(Qt.blue)
+            pen.setWidth(max(4, int(round(2.0 / self.scale))))
             painter.setPen(pen)
 
             line_path = QPainterPath()
